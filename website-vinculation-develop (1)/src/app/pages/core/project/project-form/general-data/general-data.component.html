@@ -1,0 +1,106 @@
+<div class="p-fluid grid">
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">PE-2022-06</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">Nombre Proyecto 
+        PROYECTO 1</label>
+    </span>
+  </div>
+
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">Institución 
+        LINKEAR</label>
+    </span>
+  </div>
+
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">Periodo 
+        2022</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Plazo Ejecución 
+        31-07-2022</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">Frecuencia Actividades
+         60</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <p class="pb-2">Modalidad Virtual</p>
+    <div
+      *ngFor="let modalidad"
+      class="field-radiobutton flex gap-2 flex-row">
+      <label [for]="modalidad.key">{{ modalidad.name }}</label>
+    </div>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Estado 
+        APROBADO</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <label for="inputtext">Carrera 
+        DESARROLLO SOFTWARE</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Investigación
+        TECNOLOGICO</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Fecha de presentación 
+        15-08-2022</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Fecha de inicio 
+        22-07-2022</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <label for="inputtext">Fecha de finalización 
+        14-08-2022</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <textarea [rows]="5" [cols]="30" pInputTextarea class="col-6"></textarea>
+      <label for="inputtext"> Localización 
+        Quito , AV.Francisco de orellana </label>
+    </span>
+  </div>
+</div>
