@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-observations',
@@ -7,35 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObservationsComponent implements OnInit {
   selectedState: string = '';
-  states: any[];
-
-  constructor() {
-    this.states = [
-      {
-        name: 'pendiente',
-      },
-      {
-        name: 'aprobado',
-      },
-      {
-        name: 'corregido',
-      },
-      {
-        name: 'rechazado',
-      },
-      {
-        name: 'enviado a senecyt',
-      },
-      {
-        name: 'por enviar a al senecyt',
-      },
-      {
-        name: 'en proceso',
-      },
-      {
-        name: 'terminado',
-      },
-    ];
+  
+  showModal(){
+    Swal.fire({
+      title: '¿Quieres guardar los cambios?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      denyButtonText: `No Guardar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Guardado!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Los cambios no se guardaron', '', 'info')
+      }
+    })
   }
 
   ngOnInit(): void {}
